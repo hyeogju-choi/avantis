@@ -5,7 +5,6 @@
 #include "opencv2/core/core.hpp"
 
 // 라이브러리의 이미지 전처리 함수
-// 
 void preprocess_image_bottom(uint8_t *input, int input_size, float *true_input)
 {
   // image size
@@ -58,6 +57,6 @@ int main(int argc, char** argv){
 
     float *buffer = (float *)malloc(sizeof(float) * 256 * 256 * 3); // 전처리 결과를 이 주소에 저장
     preprocess_image_bottom(img_bottom.ptr<uint8_t>(0), 640 * 480 * 3, buffer);
-    free(buffer)
+    free(buffer);
     return 0;
 }
